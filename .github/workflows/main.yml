@@ -47,7 +47,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build a program
-        run: make CFLAGS='-O2' build
+        run: make CFLAGS='-O1' build
       
       - name: Run a program
         run: make run
