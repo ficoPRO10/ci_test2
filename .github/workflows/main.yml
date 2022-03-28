@@ -30,6 +30,12 @@ jobs:
       - name: Run a program
         run: make run
         
+      - name: Create artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-debug
+          path: ci_test
+        
   build-release:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -45,3 +51,9 @@ jobs:
       
       - name: Run a program
         run: make run
+        
+      - name: Create artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-release
+          path: ci_test
